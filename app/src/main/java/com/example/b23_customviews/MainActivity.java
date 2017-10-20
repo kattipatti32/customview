@@ -9,17 +9,18 @@ import com.example.b23_customviews.views.HeaderView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private HeaderView headerView;
+    private HeaderView hView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        headerView = (HeaderView) findViewById(R.id.header_bar);
 
-        headerView.setTitle("Home screen");
-        headerView.setOnLoginListener(new View.OnClickListener() {
+        hView = (HeaderView) findViewById(R.id.header_bar);
+
+        hView.setTitle("Home screen");
+        hView.setOnLoginListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Login clicked", Toast.LENGTH_LONG).show();
